@@ -9,10 +9,12 @@
 function question1 () {
   // Answer:
   let totalPrice = 0;
+  let avgPrice = " ";
   for (let i = 0; i < data.length; i++){
     totalPrice += data[i].price;
+    avgPrice= totalPrice/data.length
   }
-  console.log(totalPrice/data.length);
+  console.log(avgPrice.toFixed(2));
 }
 
 
@@ -54,10 +56,14 @@ function question4 () {
 function question5 () {
   // Answer:
   for (var i = 0; i < data.length; i++){
-    if(data[i].materials.length > 8){
+      if(data[i].materials.length > 8){
+          console.log(data[i].title + " has " + data[i].materials.length + " materials: " + "\n");}
 
-          console.log(data[i].title + " has " + data[i].materials.length + " materials: " + data[i].materials);
-      }
+    for(var j = 0; j < data[i].materials.length; j++){
+      if(data[i].materials.length > 8){
+        console.log("-" + data[i].materials[j]);
+       }
+     }
     }
   }
   // for (var j = 0; j < data.length; j++){
